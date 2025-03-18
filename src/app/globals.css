@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 60 2% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 60 2% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 2% 10%;
+
+    --primary-foreground: 0 0% 98%;
+
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 60 5% 96%;
+    --muted-foreground: 60 2% 40%;
+
+    --accent: 60 5% 96%;
+    --accent-foreground: 60 2% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 60 5% 90%;
+    --input: 60 5% 90%;
+    --ring: 60 2% 10%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 60 2% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 60 2% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 60 2% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary-foreground: 60 2% 10%;
+
+    --secondary-foreground: 60 2% 10%;
+
+    --muted: 60 2% 20%;
+    --muted-foreground: 60 5% 65%;
+
+    --accent: 60 2% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 60 2% 20%;
+    --input: 60 2% 20%;
+    --ring: 60 5% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 155, 122, 0.2);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 155, 122, 0.4);
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
